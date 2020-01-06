@@ -7,11 +7,23 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import axios from 'axios'
 
 export default {
   name: 'app',
+  data() {
+    return {
+      content: ''
+    }
+  },
   components: {
     HelloWorld
+  },
+  mounted() {
+    let url = 'http://jsonplaceholder.typicode.com/users'
+    axios.get(url).then((ret) => {
+      this.content = ret
+    });
   }
 }
 </script>
