@@ -1,36 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import axios from 'axios'
+import HelloWorld from "./components/HelloWorld.vue";
+import jsonp from "jsonp";
 
 export default {
-  name: 'app',
+  name: "app",
   data() {
     return {
-      content: ''
-    }
+      content: ""
+    };
   },
   components: {
     HelloWorld
   },
   mounted() {
-    let url = 'http://jsonplaceholder.typicode.com/users'
-    axios.get(url).then((ret) => {
+    let url = "http://jsonplaceholder.typicode.com/users";
+    jsonp(url, (err, ret) => {
       this.content = ret
     });
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
