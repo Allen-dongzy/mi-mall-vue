@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import jsonp from "jsonp";
+import HelloWorld from "./components/HelloWorld.vue"
+import axios from "axios"
 
 export default {
   name: "app",
@@ -20,10 +20,10 @@ export default {
     HelloWorld
   },
   mounted() {
-    let url = "http://jsonplaceholder.typicode.com/users";
-    jsonp(url, (err, ret) => {
+    let url = "/api/activity/newcomer";
+    axios.get(url).then(ret => {
       this.content = ret
-    });
+    })
   }
 };
 </script>
