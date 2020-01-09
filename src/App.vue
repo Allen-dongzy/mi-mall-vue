@@ -14,13 +14,13 @@ export default {
   data() {
     return {
       content: ""
-    };
+    }
   },
   components: {
     HelloWorld
   },
   mounted() {
-    let url = "/api/activity/newcomer";
+    let url = "/api/activity/newcomer"
     axios.get(url).then(ret => {
       this.content = ret
     })
