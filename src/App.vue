@@ -1,29 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue"
-import axios from "axios"
 
 export default {
   name: "app",
   data() {
     return {
-      content: ""
-    }
+
+    };
   },
   components: {
-    HelloWorld
+    
   },
   mounted() {
-    let url = "/api/activity/newcomer"
-    axios.get(url).then(ret => {
-      this.content = ret
-    })
+
   }
 };
 </script>
