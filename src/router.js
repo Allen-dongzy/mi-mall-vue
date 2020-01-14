@@ -9,6 +9,7 @@ import Order from './pages/order'
 import OrderList from './pages/orderList'
 import OrderConfirm from './pages/orderConfirm'
 import OrderPay from './pages/orderPay'
+import AliPay from './pages/aliPay'
 
 // 用vue挂载Router实例
 Vue.use(Router)
@@ -18,16 +19,17 @@ export default new Router({
     path: '/',
     name: 'home',
     component: Home,
+    redirect: 'index',
     children: [{
-      path: '/index',
+      path: 'index',
       name: 'index',
       component: Index
     }, {
-      path: '/product/:id',
+      path: 'product/:id',
       name: 'product',
       component: Product
     }, {
-      path: '/detail/:id',
+      path: 'detail/:id',
       name: 'detail',
       component: Detail
     }]
@@ -40,17 +42,21 @@ export default new Router({
     name: 'order',
     component: Order,
     children: [{
-      path: '/list',
+      path: 'list',
       name: 'order-list',
       component: OrderList
     }, {
-      path: '/confirm',
+      path: 'confirm',
       name: 'order-confirm',
       component: OrderConfirm
     }, {
-      path: '/pay',
+      path: 'pay',
       name: 'order-pay',
       component: OrderPay
+    }, {
+      path: 'alipay',
+      name: 'order-aliPay',
+      component: AliPay
     }]
   }]
 })
