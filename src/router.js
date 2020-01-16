@@ -1,3 +1,11 @@
+/*
+ * @version: 0.0.1
+ * @Author: 董正阳
+ * @Date: 2020-01-09 12:06:17
+ * @LastEditors  : 董正阳
+ * @LastEditTime : 2020-01-16 13:34:01
+ * @Description: 
+ */
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './pages/home'

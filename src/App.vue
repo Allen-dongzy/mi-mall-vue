@@ -1,3 +1,11 @@
+<!--
+ * @version: 0.0.1
+ * @Author: 董正阳
+ * @Date: 2019-12-30 13:36:39
+ * @LastEditors: 董正阳
+ * @LastEditTime: 2020-01-16 13:33:48
+ * @Description: 
+ -->
 <template>
   <div id="app">
     <router-view></router-view>
@@ -5,7 +13,6 @@
 </template>
 
 <script>
-import storage from './storage/index'
 
 export default {
   name: "app",
@@ -18,9 +25,7 @@ export default {
     
   },
   mounted() {
-    // storage.setItem('user', {a:1})
-    // storage.setItem('info', {b:2,c:3}, 'user')
-    storage.clear('user')
+
   }
 };
 </script>
