@@ -3,7 +3,7 @@
  * @Author: 董正阳
  * @Date: 2019-12-30 13:36:39
  * @LastEditors  : 董正阳
- * @LastEditTime : 2020-01-20 14:32:08
+ * @LastEditTime : 2020-01-20 15:33:13
  * @Description: 
  */
 import Vue from 'vue'
@@ -12,8 +12,14 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import App from './App.vue'
 
+// 是否mock
+const mock = true
+if (mock) { // 若mock开关打开，则拦截里面指定的请求
+  require('./mock/api.js') // require是异步加载不是预编译加载，使用import开关就没有意义了，都会被拦截
+}
+
 // 接口请求默认配置
-// axios.defaults.baseURL = '/api' // 接口默认前缀域名，接口代理则填写proxy中的统一拦截头
+axios.defaults.baseURL = '/api' // 接口默认前缀域名，接口代理则填写proxy中的统一拦截头
 axios.defaults.timeout = 8000 // 接口超时时间
 
 // 接口响应拦截

@@ -3,7 +3,7 @@
  * @Author: 董正阳
  * @Date: 2019-12-30 13:36:39
  * @LastEditors  : 董正阳
- * @LastEditTime : 2020-01-20 14:31:22
+ * @LastEditTime : 2020-01-20 15:33:22
  * @Description: 
  -->
 <template>
@@ -25,7 +25,7 @@ export default {
     
   },
   mounted() {
-    this.axios.get('/mock/user/login.json').then(res => {
+    this.axios.get('/user/login').then(res => {
       this.res = res
     })
   }
