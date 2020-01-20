@@ -3,7 +3,7 @@
  * @Author: 董正阳
  * @Date: 2019-12-30 13:36:39
  * @LastEditors  : 董正阳
- * @LastEditTime : 2020-01-20 13:06:50
+ * @LastEditTime : 2020-01-20 14:32:08
  * @Description: 
  */
 import Vue from 'vue'
@@ -11,14 +11,10 @@ import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import App from './App.vue'
-import env from './env'
 
 // 接口请求默认配置
 // axios.defaults.baseURL = '/api' // 接口默认前缀域名，接口代理则填写proxy中的统一拦截头
-// axios.defaults.timeout = 8000 // 接口超时时间
-
-// 根据不同环境变量获取不同的接口地址
-axios.defaults.baseURL = env.baseURL;
+axios.defaults.timeout = 8000 // 接口超时时间
 
 // 接口响应拦截
 axios.interceptors.response.use(function (response) {
