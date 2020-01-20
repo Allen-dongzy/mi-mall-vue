@@ -3,7 +3,7 @@
  * @Author: 董正阳
  * @Date: 2020-01-14 17:24:09
  * @LastEditors  : 董正阳
- * @LastEditTime : 2020-01-16 13:28:38
+ * @LastEditTime : 2020-01-20 13:09:51
  * @Description: 封装storage
  */
 const STORAGE_KEY = 'setting'
@@ -45,6 +45,7 @@ export default {
   clear(key, module_name) {
     let storage = this.getStorage()
     if (module_name) { // 有模块名就删除缓存根对象的指定模块下的指定值
+      if (!storage[module_name]) return
       delete storage[module_name][key]
     } else {
       delete storage[key]// 无模块名就删除缓存根对象的指定模块/指定值
