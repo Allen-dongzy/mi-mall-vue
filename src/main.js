@@ -2,8 +2,8 @@
  * @version: 0.0.1
  * @Author: 董正阳
  * @Date: 2019-12-30 13:36:39
- * @LastEditors  : 董正阳
- * @LastEditTime : 2020-01-20 15:33:13
+ * @LastEditors: 董正阳
+ * @LastEditTime: 2020-03-27 12:13:52
  * @Description: 
  */
 import Vue from 'vue'
@@ -19,7 +19,7 @@ if (mock) { // 若mock开关打开，则拦截里面指定的请求
 }
 
 // 接口请求默认配置
-axios.defaults.baseURL = '/api' // 接口默认前缀域名，接口代理则填写proxy中的统一拦截头
+axios.defaults.baseURL = '/api' // 接口添加的默认前缀
 axios.defaults.timeout = 8000 // 接口超时时间
 
 // 接口响应拦截

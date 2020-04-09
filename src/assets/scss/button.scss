@@ -1,0 +1,39 @@
+/*
+ * @version     : 0.0.1
+ * @Author      : 董正阳
+ * @Date        : 2020-03-26 23:53:40
+ * @LastEditors: 董正阳
+ * @LastEditTime: 2020-03-27 00:11:04
+ * @Description : 
+ */
+@import "./config.scss";
+@import "./mixin.scss";
+
+.btn {
+  @include box(160px, 40px, $colorL);
+  @include flex-row();
+  @include font-set(16px, $colorG, 500);
+  cursor: pointer;
+}
+
+.bg-primary {
+  background: $colorA !important;
+}
+
+.btn-large {
+  @include box(202px, 50px);
+  @include flex-row();
+  @include font-set(16px, $colorG, 500);
+}
+
+.btn-huge{
+  @include box(300px, 54px);
+  @include flex-row();
+  @include font-set(16px, $colorG, 500);
+}
+
+.btn-group{
+  .btn~.btn{
+    margin-left: 14px;
+  }
+}

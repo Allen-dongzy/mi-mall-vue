@@ -2,13 +2,12 @@
  * @version: 0.0.1
  * @Author: 董正阳
  * @Date: 2020-01-09 12:11:50
- * @LastEditors  : 董正阳
- * @LastEditTime : 2020-01-16 13:34:35
+ * @LastEditors: 董正阳
+ * @LastEditTime: 2020-02-18 14:04:09
  * @Description: 
  -->
 <template>
   <div>
-    home:
     <nav-header></nav-header>
     <router-view></router-view>
     <nav-footer></nav-footer>
